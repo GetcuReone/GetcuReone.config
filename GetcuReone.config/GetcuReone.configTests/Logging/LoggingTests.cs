@@ -30,13 +30,12 @@ namespace GetcuReone.configTests.Logging
         [Timeout(Timeouts.Millisecond.FiveHundred)]
         public void CheckNLogNameTestCase()
         {
-            const string key = "nlog.loggerName";
             const string expectedValue = "GR_log";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
                 .When("Get Logging config.", current => current.Logging)
                 .ThenIsNotNull()
-                .AndAreEqual(configs => configs[key].Value, expectedValue)
+                .AndAreEqual(configs => configs[GrConfigKeys.Logging.NlogLoggerName].Value, expectedValue)
                 .Run();
         }
     }

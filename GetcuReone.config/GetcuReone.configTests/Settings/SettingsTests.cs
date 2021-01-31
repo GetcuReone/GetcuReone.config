@@ -30,12 +30,11 @@ namespace GetcuReone.configTests.Settings
         [Timeout(Timeouts.Millisecond.FiveHundred)]
         public void CheckSettingsFolderTestCase()
         {
-            const string key = "SettingsFolder";
             const string expectedValue = "settins";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
                 .When("Get Settings config.", current => current.Settings)
-                .ThenAreEqual(configs => configs[key].Value, expectedValue)
+                .ThenAreEqual(configs => configs[GrConfigKeys.Settings.SettingsFolder].Value, expectedValue)
                 .Run();
         }
 
@@ -45,12 +44,11 @@ namespace GetcuReone.configTests.Settings
         [Timeout(Timeouts.Millisecond.FiveHundred)]
         public void CheckTemplateSettingFileTestCase()
         {
-            const string key = "TemplateSettingFile";
             const string expectedValue = "GetcuReone_Settings*.xml";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
                 .When("Get Settings config.", current => current.Settings)
-                .ThenAreEqual(configs => configs[key].Value, expectedValue)
+                .ThenAreEqual(configs => configs[GrConfigKeys.Settings.TemplateSettingFile].Value, expectedValue)
                 .Run();
         }
 
@@ -60,12 +58,11 @@ namespace GetcuReone.configTests.Settings
         [Timeout(Timeouts.Millisecond.FiveHundred)]
         public void CheckSettingTypesFileTestCase()
         {
-            const string key = "SettingTypesFile";
             const string expectedValue = @"settins\GetcuReone_SettingTypes.xml";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
                 .When("Get Settings config.", current => current.Settings)
-                .ThenAreEqual(configs => configs[key].Value, expectedValue)
+                .ThenAreEqual(configs => configs[GrConfigKeys.Settings.SettingTypesFile].Value, expectedValue)
                 .Run();
         }
     }

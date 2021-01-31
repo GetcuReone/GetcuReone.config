@@ -52,6 +52,41 @@
             Value.
             </summary>
         </member>
+        <member name="T:GetcuReone.Cdo.Configuration.GrConfigKeys">
+            <summary>
+            Configuration keys.
+            </summary>
+        </member>
+        <member name="T:GetcuReone.Cdo.Configuration.GrConfigKeys.Logging">
+            <summary>
+            Configuration keys for logging.
+            </summary>
+        </member>
+        <member name="F:GetcuReone.Cdo.Configuration.GrConfigKeys.Logging.NlogLoggerName">
+            <summary>
+            Logger name in nlog.
+            </summary>
+        </member>
+        <member name="T:GetcuReone.Cdo.Configuration.GrConfigKeys.Settings">
+            <summary>
+            Configuration keys for settings.
+            </summary>
+        </member>
+        <member name="F:GetcuReone.Cdo.Configuration.GrConfigKeys.Settings.SettingsFolder">
+            <summary>
+            Path to the settings folder.
+            </summary>
+        </member>
+        <member name="F:GetcuReone.Cdo.Configuration.GrConfigKeys.Settings.TemplateSettingFile">
+            <summary>
+            Settings file template.
+            </summary>
+        </member>
+        <member name="F:GetcuReone.Cdo.Configuration.GrConfigKeys.Settings.SettingTypesFile">
+            <summary>
+            The path to the file with the types of settings.
+            </summary>
+        </member>
         <member name="T:GetcuReone.Cdo.Configuration.GrConfigManager">
             <summary>
             Config manager.
