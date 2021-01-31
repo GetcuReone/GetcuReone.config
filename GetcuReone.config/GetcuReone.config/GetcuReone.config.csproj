@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>GetcuReone.Cdo.Configuration</RootNamespace>
+        <DocumentationFile>GetcuReone.config.xml</DocumentationFile>
+
+        <Authors>Itua Juel-Gaben</Authors>
+        <PackageId>GetcuReone.config</PackageId>
+        <Product>GetcuReone.config</Product>
+        <Description>Project containing file for configuration of GetcuReone projects.</Description>
+        <RepositoryUrl>https://github.com/GetcuReone/GetcuReone.config</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>config configuration getcureone</PackageTags>
+        <PackageReleaseNotes></PackageReleaseNotes>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageProjectUrl>https://github.com/GetcuReone/GetcuReone.config/blob/master/README.md</PackageProjectUrl>
+        <Copyright>Copyright © 2021 $(Authors)</Copyright>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
+        <DelaySign>false</DelaySign>
+        <AssemblyVersion>$(majorVersion).$(minorVersion).0.0</AssemblyVersion>
+        <FileVersion>$(majorVersion).$(minorVersion).0.0</FileVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(PackageVersion)'==''">
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(RepositoryBranch)'==''">
+        <RepositoryBranch>develop</RepositoryBranch>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="GetcuReone.config">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <Pack>True</Pack>
+            <PackagePath>contentFiles\any\any</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GetcuReone.Cdm" Version="[1.3.0,)" />
+    </ItemGroup>
+
+</Project>
