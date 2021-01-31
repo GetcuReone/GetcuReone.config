@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GetcuReone.config</name>
+    </assembly>
+    <members>
+        <member name="T:GetcuReone.Cdo.Configuration.Entities.GrConfigCollection">
+            <summary>
+            ConfigValue collection.
+            </summary>
+        </member>
+        <member name="P:GetcuReone.Cdo.Configuration.Entities.GrConfigCollection.Item(System.String)">
+            <summary>
+            Return configuration by key.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GetcuReone.Cdo.Configuration.Entities.GrConfigCollection.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:GetcuReone.Cdo.Configuration.Entities.GrConfigCollection.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="T:GetcuReone.Cdo.Configuration.Entities.GrConfiguration">
+            <summary>
+            Configuration.
+            </summary>
+        </member>
+        <member name="P:GetcuReone.Cdo.Configuration.Entities.GrConfiguration.Settings">
+            <summary>
+            Settings configuration.
+            </summary>
+        </member>
+        <member name="P:GetcuReone.Cdo.Configuration.Entities.GrConfiguration.Logging">
+            <summary>
+            Logging configuration.
+            </summary>
+        </member>
+        <member name="T:GetcuReone.Cdo.Configuration.Entities.GrConfigValue">
+            <summary>
+            Config value.
+            </summary>
+        </member>
+        <member name="P:GetcuReone.Cdo.Configuration.Entities.GrConfigValue.Key">
+            <summary>
+            Key.
+            </summary>
+        </member>
+        <member name="P:GetcuReone.Cdo.Configuration.Entities.GrConfigValue.Value">
+            <summary>
+            Value.
+            </summary>
+        </member>
+        <member name="T:GetcuReone.Cdo.Configuration.GrConfigManager">
+            <summary>
+            Config manager.
+            </summary>
+        </member>
+        <member name="P:GetcuReone.Cdo.Configuration.GrConfigManager.Current">
+            <summary>
+            Current configuration.
+            </summary>
+        </member>
+        <member name="M:GetcuReone.Cdo.Configuration.GrConfigManager.Load(System.String)">
+            <summary>
+            Load <see cref="T:GetcuReone.Cdm.Configuration.GetcuReoneConfig"/>.
+            </summary>
+            <param name="confiFile">Configuration file path.</param>
+        </member>
+    </members>
+</doc>
