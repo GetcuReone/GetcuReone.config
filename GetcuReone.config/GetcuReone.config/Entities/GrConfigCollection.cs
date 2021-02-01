@@ -23,7 +23,7 @@ namespace GetcuReone.Cdo.Configuration.Entities
         internal GrConfigCollection(List<ConfigValue> configValues)
         {
             this.configValues = configValues;
-            grConfigValues = configValues.ConvertAll(config => new GrConfigValue(config));
+            grConfigValues = configValues?.ConvertAll(config => new GrConfigValue(config)) ?? new List<GrConfigValue>();
         }
 
         /// <inheritdoc/>
