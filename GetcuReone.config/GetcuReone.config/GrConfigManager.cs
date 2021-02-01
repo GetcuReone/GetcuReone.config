@@ -1,5 +1,6 @@
 ﻿using GetcuReone.Cdm.Configuration;
 using GetcuReone.Cdo.Configuration.Entities;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -31,6 +32,13 @@ namespace GetcuReone.Cdo.Configuration
         /// <param name="confiFile">Configuration file path.</param>
         internal static GetcuReoneConfig Load(string confiFile)
         {
+            if (!File.Exists(confiFile))
+                return new GetcuReoneConfig
+                {
+                    LoggingConfigs = new List<ConfigValue>(),
+                    SettingsConfigs = new List<ConfigValue>(),
+                };
+                
             using (var fileStream = File.OpenRead(confiFile))
             {
                 var formatter = new XmlSerializer(typeof(GetcuReoneConfig), new XmlRootAttribute("configuration"));
