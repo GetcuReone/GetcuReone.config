@@ -19,6 +19,7 @@ namespace GetcuReone.Cdo.Configuration
             {
                 if (_current == null)
                     _current = new GrConfiguration(Load("GetcuReone.config"));
+                    
                 return _current;
             }
         }
