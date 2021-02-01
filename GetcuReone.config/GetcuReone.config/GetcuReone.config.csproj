@@ -3,7 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>GetcuReone.Cdo.Configuration</RootNamespace>
-        <DocumentationFile>GetcuReone.config.xml</DocumentationFile>
+        <DocumentationFile>GetcuReone.Configuration.xml</DocumentationFile>
+        <AssemblyName>GetcuReone.Configuration</AssemblyName>
 
         <Authors>Itua Juel-Gaben</Authors>
         <PackageId>GetcuReone.config</PackageId>

@@ -31,11 +31,12 @@ namespace InfrastructureTests
         public void NugetHaveNeedFilesTestCase()
         {
             string nugetId = $"{_projectName}";
+            string assemblyName = "GetcuReone.Configuration";
             string libPattern = $"lib/{TargetFramework}/" + "{0}";
             var files = new string[]
             {
-                string.Format(libPattern, $"{_projectName}.dll"),
-                string.Format(libPattern, $"{_projectName}.xml"),
+                string.Format(libPattern, $"{assemblyName}.dll"),
+                string.Format(libPattern, $"{assemblyName}.xml"),
 
                 "contentFiles/any/any/GetcuReone.config",
 
