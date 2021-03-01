@@ -37,6 +37,7 @@ namespace GetcuReone.Cdo.Configuration
                 {
                     LoggingConfigs = new List<ConfigValue>(),
                     SettingsConfigs = new List<ConfigValue>(),
+                    Sections = new List<SectionConfig>(),
                 };
                 
             using (var fileStream = File.OpenRead(confiFile))
