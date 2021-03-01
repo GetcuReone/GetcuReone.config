@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace GetcuReone.Cdo.Configuration.Entities
 {
+    /// <summary>
+    /// Section collection.
+    /// </summary>
     public sealed class GrSectionConfigCollection : IEnumerable<GrSectionConfig>
     {
         internal readonly List<SectionConfig> sectionConfigs;
