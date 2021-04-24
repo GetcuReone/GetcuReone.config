@@ -13,4 +13,5 @@
     <ItemGroup>
       <ProjectReference Include="..\..\GetcuReone.config\GetcuReone.config.csproj" />
     </ItemGroup>
+
 </Project>
