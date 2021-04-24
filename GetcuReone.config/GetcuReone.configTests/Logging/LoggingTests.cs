@@ -18,7 +18,7 @@ namespace GetcuReone.configTests.Logging
             const int expectedCount = 1;
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
-                .When("Get Logging config.", current => current.Logging)
+                .When("Get Logging config.", current => current.Sections[GrConfigKeys.Logging.Name].Configs)
                 .ThenIsNotNull()
                 .AndAreEqual(configs => configs.Count(), expectedCount)
                 .Run();
@@ -33,7 +33,7 @@ namespace GetcuReone.configTests.Logging
             const string expectedValue = "GR_log";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
-                .When("Get Logging config.", current => current.Logging)
+                .When("Get Logging config.", current => current.Sections[GrConfigKeys.Logging.Name].Configs)
                 .ThenIsNotNull()
                 .AndAreEqual(configs => configs[GrConfigKeys.Logging.NlogLoggerName].Value, expectedValue)
                 .Run();

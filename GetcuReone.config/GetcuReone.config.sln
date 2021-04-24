@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCommon", "Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfrastructureTests", "Infrastructure\InfrastructureTests\InfrastructureTests.csproj", "{5B225E2A-CBBF-4037-874F-B1E6AD5C39CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetcuReone.configTests", "GetcuReone.configTests\GetcuReone.configTests.csproj", "{2FCDC323-ACBC-46AD-BA12-6988117515EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetcuReone.configTests", "GetcuReone.configTests\GetcuReone.configTests.csproj", "{2FCDC323-ACBC-46AD-BA12-6988117515EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".buildTools", ".buildTools", "{655A45C0-0422-4C9A-93B7-D10CAEEE2825}"
+	ProjectSection(SolutionItems) = preProject
+		.buildTools\GetcuReone.Common.props = .buildTools\GetcuReone.Common.props
+		.buildTools\GetcuReone.Lib.props = .buildTools\GetcuReone.Lib.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
