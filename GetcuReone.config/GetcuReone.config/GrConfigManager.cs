@@ -35,8 +35,6 @@ namespace GetcuReone.Cdo.Configuration
             if (!File.Exists(confiFile))
                 return new GetcuReoneConfig
                 {
-                    LoggingConfigs = new List<ConfigValue>(),
-                    SettingsConfigs = new List<ConfigValue>(),
                     Sections = new List<SectionConfig>(),
                 };
                 
