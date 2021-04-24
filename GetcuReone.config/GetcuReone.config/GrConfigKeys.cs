@@ -11,6 +11,11 @@
         public static class Logging
         {
             /// <summary>
+            /// Name section.
+            /// </summary>
+            public const string Name = "logging";
+
+            /// <summary>
             /// Logger name in nlog.
             /// </summary>
             public const string NlogLoggerName = "nlog.loggerName";
@@ -21,6 +26,11 @@
         /// </summary>
         public static class Settings
         {
+            /// <summary>
+            /// Name section.
+            /// </summary>
+            public const string Name = "settings";
+
             /// <summary>
             /// Path to the settings folder.
             /// </summary>

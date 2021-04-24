@@ -10,16 +10,6 @@ namespace GetcuReone.Cdo.Configuration.Entities
         internal GetcuReoneConfig getcuReoneConfig;
 
         /// <summary>
-        /// Settings configuration.
-        /// </summary>
-        public GrConfigCollection Settings { get; }
-
-        /// <summary>
-        /// Logging configuration.
-        /// </summary>
-        public GrConfigCollection Logging { get; }
-
-        /// <summary>
         /// Sections.
         /// </summary>
         public GrSectionConfigCollection Sections { get; }
@@ -27,8 +17,6 @@ namespace GetcuReone.Cdo.Configuration.Entities
         internal GrConfiguration(GetcuReoneConfig getcuReoneConfig)
         {
             this.getcuReoneConfig = getcuReoneConfig;
-            Settings = new GrConfigCollection(getcuReoneConfig.SettingsConfigs);
-            Logging = new GrConfigCollection(getcuReoneConfig.LoggingConfigs);
             Sections = new GrSectionConfigCollection(getcuReoneConfig.Sections);
         }
     }

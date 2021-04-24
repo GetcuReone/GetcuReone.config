@@ -18,7 +18,7 @@ namespace GetcuReone.configTests.Settings
             const int expectedCount = 3;
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
-                .When("Get Settings config.", current => current.Settings)
+                .When("Get Settings config.", current => current.Sections[GrConfigKeys.Settings.Name].Configs)
                 .ThenIsNotNull()
                 .AndAreEqual(configs => configs.Count(), expectedCount)
                 .Run();
@@ -33,7 +33,7 @@ namespace GetcuReone.configTests.Settings
             const string expectedValue = "settins";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
-                .When("Get Settings config.", current => current.Settings)
+                .When("Get Settings config.", current => current.Sections[GrConfigKeys.Settings.Name].Configs)
                 .ThenAreEqual(configs => configs[GrConfigKeys.Settings.SettingsFolder].Value, expectedValue)
                 .Run();
         }
@@ -47,7 +47,7 @@ namespace GetcuReone.configTests.Settings
             const string expectedValue = "GetcuReone_Settings*.xml";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
-                .When("Get Settings config.", current => current.Settings)
+                .When("Get Settings config.", current => current.Sections[GrConfigKeys.Settings.Name].Configs)
                 .ThenAreEqual(configs => configs[GrConfigKeys.Settings.TemplateSettingFile].Value, expectedValue)
                 .Run();
         }
@@ -61,7 +61,7 @@ namespace GetcuReone.configTests.Settings
             const string expectedValue = @"settins\GetcuReone_SettingTypes.xml";
 
             Given("Get GetcuReone config.", () => GrConfigManager.Current)
-                .When("Get Settings config.", current => current.Settings)
+                .When("Get Settings config.", current => current.Sections[GrConfigKeys.Settings.Name].Configs)
                 .ThenAreEqual(configs => configs[GrConfigKeys.Settings.SettingTypesFile].Value, expectedValue)
                 .Run();
         }
