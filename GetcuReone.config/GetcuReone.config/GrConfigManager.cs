@@ -19,18 +19,39 @@ namespace GetcuReone.Cdo.Configuration
             get
             {
                 if (_current == null)
-                    _current = new GrConfiguration(Load("GetcuReone.config"));
-                    
+                    Load();
+
                 return _current;
             }
         }
         private static GrConfiguration _current;
 
         /// <summary>
+        /// Load <see cref="Current"/>.
+        /// </summary>
+        /// <param name="confiFile">Configuration file name.</param>
+        public static void Load(string confiFile = GrConfigKeys.DefaultCofigFile)
+        {
+            var configuration = _Load(confiFile);
+            _current = new GrConfiguration(configuration, confiFile);
+        }
+
+        /// <summary>
+        /// Update <see cref="Current"/> configuration data.
+        /// </summary>
+        public static void Update()
+        {
+            if (_current == null)
+                Load();
+            else
+                Load(_current.configFile);
+        }
+
+        /// <summary>
         /// Load <see cref="GetcuReoneConfig"/>.
         /// </summary>
         /// <param name="confiFile">Configuration file path.</param>
-        internal static GetcuReoneConfig Load(string confiFile)
+        internal static GetcuReoneConfig _Load(string confiFile)
         {
             if (!File.Exists(confiFile))
                 return new GetcuReoneConfig

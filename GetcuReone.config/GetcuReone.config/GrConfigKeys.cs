@@ -6,6 +6,11 @@
     public static class GrConfigKeys
     {
         /// <summary>
+        /// Default configuration file name.
+        /// </summary>
+        public const string DefaultCofigFile = "GetcuReone.config";
+
+        /// <summary>
         /// Configuration keys for logging.
         /// </summary>
         public static class Logging
